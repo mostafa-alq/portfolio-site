@@ -1,0 +1,68 @@
+.aboutSection {
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.introText {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  font-family: "Special Gothic Expanded One", var(--font-arabic), sans-serif;
+}
+
+.descriptionText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+.descriptionText span,
+.introText span {
+  color: rgb(183, 183, 183);
+}
+
+.findOutMore {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.findOutMore a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  background-color: rgba(41, 55, 64, 0.1);
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+
+  animation: fadeIn 2s ease-out;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.findOutMore a:hover {
+  background-color: #3a4a54;
+}

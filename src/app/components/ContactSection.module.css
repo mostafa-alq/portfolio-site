@@ -1,0 +1,44 @@
+.contactTitle {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #000233, #2d2f61);
+}
+
+.contacts a:hover {
+  background-color: #3a4a54;
+}
+
+.contacts {
+  animation: fadeIn 2s ease-out;
+  animation-delay: 3.5s;
+  animation-fill-mode: both;
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
