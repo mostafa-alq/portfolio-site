@@ -1,6 +1,6 @@
 .touchSection {
-  background: linear-gradient(135deg, #000233, #2d2f61);
-  border-radius: 80px;
+  background: rgba(41, 55, 64, 0.1);
+  border-radius: 30px;
   padding: 40px;
   text-align: center;
   color: white;
@@ -22,8 +22,9 @@
 
 .title {
   font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 10px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  align-items: center;
 }
 
 .subtitle {
@@ -35,16 +36,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #00cc99;
+  background-color: rgba(123, 169, 207, 0.3);
   color: black;
   font-size: 1rem;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  color: white;
 }
 
 .button:hover {
-  background-color: #009977;
+  background-color: rgb(123, 169, 207);
 }

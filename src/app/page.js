@@ -1,13 +1,14 @@
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import Touch from "./components/Touch";
+import Footer from "./components/Footer";
 
 function HomePage() {
   return (
     <div>
       <AboutSection />
-      <ContactSection />
       <Touch />
+      <Footer />
     </div>
   );
 }

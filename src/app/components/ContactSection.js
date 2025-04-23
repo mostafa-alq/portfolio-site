@@ -1,11 +1,14 @@
 import styles from "./ContactSection.module.css";
 import Link from "next/link";
 
-function ContactSection() {
+function ContactSection({ visible }) {
   return (
-    <section className={styles.contacts}>
+    <section
+      id="contact"
+      className={`${styles.contacts} ${visible ? styles.fadeIn : ""}`}
+    >
       <div>
-        <h2 className={styles.contactTitle}>[ LINKS ]</h2>
+        <h2 className={styles.contactTitle}>LINKS</h2>
         <Link
           href="https://www.linkedin.com/in/mostafa-alqadi-471843238/"
           target="_blank"
@@ -20,7 +23,7 @@ function ContactSection() {
         </Link>
       </div>
       <div>
-        <h2 className={styles.contactTitle}>[ PROJECTS ]</h2>
+        <h2 className={styles.contactTitle}>PROJECTS</h2>
         <Link href="https://github.com/mostafa-alq/raycaster" target="_blank">
           Raycaster Engine↗
         </Link>
@@ -32,6 +35,18 @@ function ContactSection() {
         </Link>
         <Link href="https://github.com/mostafa-alq/halal_lang" target="_blank">
           Stack-based Language ↗
+        </Link>
+      </div>
+      <div>
+        <h2 className={styles.contactTitle}>HACKATHONS</h2>
+        <Link href="https://www.kcl.ac.uk/events/rivers-hackathon">
+          Rivers @ KCL↗
+        </Link>
+        <Link
+          href="https://github.com/mostafa-alq/prntsc_scraper"
+          target="_blank"
+        >
+          EasyA x Polkadot ↗
         </Link>
       </div>
     </section>

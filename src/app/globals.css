@@ -1,22 +1,12 @@
 :root {
   --background-color: #0c222b;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
 }
 
 body {
-  background: linear-gradient(-45deg, #8eabd6, #08081a, #000b1c);
-  background-size: 400% 400%;
+  background: linear-gradient(0deg, #000000, #000c1c);
+  background-size: 100% 100%;
   min-height: 100vh;
   background-position: center;
   background-repeat: repeat;
@@ -26,7 +16,8 @@ body {
   justify-content: center;
   position: relative;
   width: 100%;
-  animation: gradient 10s ease infinite; /* Apply gradient animation */
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 body {
@@ -96,6 +87,23 @@ nav a {
 
 nav a:hover {
   background-color: #293740;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+  margin-bottom: 1.5rem;
 }
 
 /* latin-ext */
