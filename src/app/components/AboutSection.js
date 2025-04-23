@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./AboutSection.module.css";
 import ContactSection from "./ContactSection";
 import Touch from "./Touch";
+import { CornerRightDown } from "lucide-react";
 
 function AboutSection() {
   const [isContactVisible, setIsContactVisible] = useState(false);
@@ -29,7 +30,7 @@ function AboutSection() {
       </p>
       <div className={styles.findOutMore}>
         <button onClick={handleShowContact} className={styles.findOutMore}>
-          Find out more.
+          Find out more <CornerRightDown size={18} />
         </button>
       </div>
       <ContactSection visible={isContactVisible} />

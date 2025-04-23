@@ -10,7 +10,7 @@ function Touch() {
         out!
       </p>
       <Link href="mailto:example@example.com" className={styles.button}>
-        <span>📧</span> Get in Touch
+        📧{"  "}Get in Touch
       </Link>
     </section>
   );
