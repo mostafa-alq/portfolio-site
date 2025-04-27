@@ -43,7 +43,7 @@ function ContactSection({ visible }) {
           Rivers @ KCL↗
         </Link>
         <Link
-          href="https://github.com/mostafa-alq/prntsc_scraper"
+          href="https://www.easya.io/events/easya-x-polkadot-london-hackathon-2"
           target="_blank"
         >
           EasyA x Polkadot ↗
