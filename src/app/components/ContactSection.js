@@ -39,7 +39,10 @@ function ContactSection({ visible }) {
       </div>
       <div>
         <h2 className={styles.contactTitle}>HACKATHONS</h2>
-        <Link href="https://www.kcl.ac.uk/events/rivers-hackathon">
+        <Link
+          href="https://www.kcl.ac.uk/events/rivers-hackathon"
+          target="_blank"
+        >
           Rivers @ KCL↗
         </Link>
         <Link
