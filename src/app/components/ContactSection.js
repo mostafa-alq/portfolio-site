@@ -7,7 +7,7 @@ function ContactSection({ visible }) {
       id="contact"
       className={`${styles.contacts} ${visible ? styles.fadeIn : ""}`}
     >
-      <div>
+      {/* <div>
         <h2 className={styles.contactTitle}>LINKS</h2>
         <Link
           href="https://www.linkedin.com/in/mostafa-alqadi-471843238/"
@@ -21,7 +21,7 @@ function ContactSection({ visible }) {
         <Link href="https://www.instagram.com/uow.coding.soc/" target="_blank">
           Instagram ↗
         </Link>
-      </div>
+      </div> */}
       <div>
         <h2 className={styles.contactTitle}>PROJECTS</h2>
         <Link href="https://github.com/mostafa-alq/raycaster" target="_blank">
