@@ -1,14 +1,18 @@
 .touchSection {
-  background: rgba(41, 55, 64, 0.1);
-  border-radius: 30px;
-  padding: 40px;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0px;
+  padding: 32px;
   text-align: center;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 80px;
+  color: #ffffff;
+  box-shadow: none;
+  border: 1px solid transparent;
+  margin: 24px auto 64px;
+  max-width: 960px;
   animation: fadeIn 2s ease-out;
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
   animation-fill-mode: both;
+  backdrop-filter: blur(3px);
 }
 
 @keyframes fadeIn {
@@ -22,31 +26,47 @@
 
 .title {
   font-size: 2rem;
-  margin-bottom: 10px;
-  font-family: "Special Gothic Expanded One", sans-serif;
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
   align-items: center;
 }
 
 .subtitle {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-family: var(--font-copy);
+  line-height: 1.6;
+  letter-spacing: 0.008em;
+  color: #d0d0d0;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(123, 169, 207, 0.3);
-  color: black;
+  background-color: transparent;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 0px;
+  border: none;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  color: white;
+  transition: all 0.3s ease;
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+}
+
+.button::before {
+  content: "[";
+  margin-right: 10px;
+}
+
+.button::after {
+  content: "]";
+  margin-left: 10px;
 }
 
 .button:hover {
-  background-color: rgb(123, 169, 207);
+  opacity: 0.7;
 }

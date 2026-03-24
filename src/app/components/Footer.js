@@ -8,7 +8,9 @@ function Footer() {
       <p>
         Built with<Link href="https://reactjs.org/">React</Link>and
         <Link href="https://aceternity.com/">NextJS.</Link>Source available on
-        <Link href="https://github.com/mostafa-alq/portfolio-site">GitHub</Link>
+        <Link href="https://github.com/mostafa-alq/portfolio-site">
+          GitHub.
+        </Link>
       </p>
       <p>📍 London, UK</p>
     </footer>

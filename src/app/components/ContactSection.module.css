@@ -1,56 +1,223 @@
-.contactTitle {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  align-items: center;
+.contacts {
+  opacity: 0;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  animation: fadeIn 1.5s ease-out;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
 }
 
-.contacts a {
+.contacts > div {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  justify-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.hackathonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 620px;
+  margin: 8px auto 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.hackathonCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 250px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  gap: 0;
+  backdrop-filter: blur(2px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.projectButton {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
   font-size: 1.1rem;
   font-weight: 500;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  border-radius: 0px;
+  transition: all 0.3s ease;
   text-align: center;
-  width: 200px;
   height: 50px;
-  margin: 0 auto;
-  background: rgba(41, 55, 64, 0.1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
 }
 
-.contacts a:hover {
-  background-color: #3a4a54;
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+.projectButton::before {
+  content: "[";
+  margin-right: 10px;
 }
 
-.contacts {
-  opacity: 0;
-  transition: opacity 2s ease-out;
+.projectButton::after {
+  content: "]";
+  margin-left: 10px;
+}
+
+.projectButton:hover {
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+.projectDescription {
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid transparent;
+  border-radius: 0px;
+  color: #e2e2e2;
+  font-family: var(--font-copy);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.45;
+  letter-spacing: 0.004em;
+  text-align: left;
+  backdrop-filter: blur(2px);
+}
+
+.contactTitle {
+  font-family: var(--font-heading);
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+
+.hackathonCard a {
   display: flex;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  padding: 8px 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 185px;
+  height: 40px;
+  margin: 4px auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
 }
 
-.contacts div {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 1rem;
-  line-height: 1.5;
+.hackathonCard a::before {
+  content: "[";
+  margin-right: 10px;
+}
+
+.hackathonCard a::after {
+  content: "]";
+  margin-left: 10px;
+}
+
+.hackathonCard a:hover {
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+.contacts > div:last-child {
+  padding: 0 8px;
+  box-sizing: border-box;
 }
 
 .fadeIn {

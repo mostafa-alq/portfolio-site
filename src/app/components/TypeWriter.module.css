@@ -15,13 +15,14 @@
 }
 
 .typewriterText {
-  color: white;
+  color: #ffffff;
   font-weight: 600;
   font-size: inherit;
+  font-family: var(--font-heading);
 }
 
 .cursor {
-  border-right: 2px solid white;
+  border-right: 2px solid #ffffff;
   margin-left: 4px;
   animation: blink 0.7s infinite;
 }

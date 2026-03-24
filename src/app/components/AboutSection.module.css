@@ -4,6 +4,26 @@
 
 .aboutSectionFat {
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.aboutCopy {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@keyframes swipeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeIn {
@@ -20,37 +40,43 @@
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 10px;
-  animation: fadeIn 2s ease-out;
-  animation-delay: 0.5s;
+  animation: swipeIn 1s ease-out;
+  animation-delay: 0s;
   animation-fill-mode: both;
-  font-family: "Special Gothic Expanded One", var(--font-arabic), sans-serif;
+  font-family: var(--font-heading);
 }
 
 .subtitleText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
-  color: rgb(183, 183, 183);
-  animation: fadeIn 2s ease-out;
-  animation-delay: 1.5s;
+  color: #b9b9b9;
+  font-family: var(--font-copy);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  animation: swipeIn 1s ease-out;
+  animation-delay: 0.8s;
   animation-fill-mode: both;
-  margin-top: 0px;
+  margin-top: 16px;
   margin-bottom: 16px;
 }
 
 .descriptionText {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 700px;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
-  animation: fadeIn 2s ease-out;
-  animation-delay: 1.5s;
+  font-family: var(--font-copy);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  animation: swipeIn 1s ease-out;
+  animation-delay: 0.8s;
   animation-fill-mode: both;
 }
 
 .descriptionText span,
 .introText span {
-  color: rgb(183, 183, 183);
+  color: #999999;
 }
 
 .findOutMore {
@@ -59,28 +85,43 @@
 }
 
 .findOutMore button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   font-size: 2rem;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  border: 0px;
-  border-radius: 10px;
-  background-color: rgba(41, 55, 64, 0.1);
-  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent;
+  transition: all 0.3s ease;
   text-align: center;
   width: fit-content;
   margin: 0 auto;
+  position: relative;
 
   animation: fadeIn 2s ease-out;
   animation-delay: 2.5s;
   animation-fill-mode: both;
 
-  font-family: "Special Gothic Expanded One", sans-serif;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.findOutMore button::before {
+  content: "[";
+  margin-right: 10px;
+}
+
+.findOutMore button::after {
+  content: "]";
+  margin-left: 10px;
 }
 
 .findOutMore button:hover {
-  background-color: #3a4a54;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -96,8 +137,8 @@
   margin-left: auto;
   margin-right: auto;
   width: max-content;
-  animation: fadeIn 2s ease-out;
-  animation-delay: 1.5s;
+  animation: swipeIn 1s ease-out;
+  animation-delay: 0.8s;
   animation-fill-mode: both;
 }
 
@@ -115,18 +156,18 @@
 }
 
 .socialButton:hover {
-  background-color: white;
-  border-radius: 8px;
+  background-color: transparent;
+  border-radius: 0px;
 }
 
 .socialButton:hover svg {
-  color: #0c222b;
-  stroke: #0c222b;
+  color: #ffffff;
+  stroke: #ffffff;
 }
 
 .socialButton svg {
-  color: white;
-  stroke: white;
+  color: #ffffff;
+  stroke: #ffffff;
 }
 
 .iconWrapper {

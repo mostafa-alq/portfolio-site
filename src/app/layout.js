@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Inter, Noto_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import CursorHexEffect from "./components/CursorHexEffect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${InterFont.variable} ${ArabicFont.variable}`}
       >
+        <CursorHexEffect />
         <Navbar />
         {children}
       </body>

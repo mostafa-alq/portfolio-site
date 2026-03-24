@@ -1,18 +1,11 @@
 "use client";
-import { useState } from "react";
 import styles from "./AboutSection.module.css";
 import ContactSection from "./ContactSection";
 import Touch from "./Touch";
 import TypeWriter from "./TypeWriter";
-import { CornerRightDown, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 function AboutSection() {
-  const [isContactVisible, setIsContactVisible] = useState(false);
-
-  const handleShowContact = () => {
-    setIsContactVisible(true);
-  };
-
   return (
     <section className={styles.aboutSectionFat}>
       <div id="about" className={styles.aboutSection}>
@@ -22,7 +15,7 @@ function AboutSection() {
         </h1>
       </div>
 
-      <div>
+      <div className={styles.aboutCopy}>
         <p className={styles.descriptionText}>
           Undergraduate Computer Science student <span>and</span> President of
           Coding Society <span>at the</span> University of Westminster.
@@ -63,13 +56,7 @@ function AboutSection() {
         </a>
       </div>
 
-      <div className={styles.findOutMore}>
-        <button onClick={handleShowContact} className={styles.findOutMore}>
-          Find out more <CornerRightDown size={18} />
-        </button>
-      </div>
-
-      <ContactSection visible={isContactVisible} />
+      <ContactSection visible={true} />
     </section>
   );
 }
