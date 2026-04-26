@@ -24,6 +24,13 @@ function ContactSection({ visible }) {
       description:
         "A first-person puzzle game built in Unreal Engine featuring a core 'Dimension Swap' mechanic allowing players to manipulate the environment to solve spatial puzzles.",
     },
+    {
+      title: "JAXRS Server",
+      link: "https://github.com/mostafa-alq/JAXRS-server",
+      image: "/jaxrs.svg",
+      description:
+        "A RESTful API built with JAX-RS and Grizzly to manage campus rooms and sensors. Features sub-resource locators, HATEOAS links, custom exception mapping, and request logging via container filters.",
+    },
   ];
   const hackathons = [
     {
@@ -36,50 +43,53 @@ function ContactSection({ visible }) {
       title: "EasyA x Polkadot",
       link: "https://www.easya.io/events/easya-x-polkadot-london-hackathon-2",
       description:
-        "As Coding Society President, I Spearheaded our participation in the EasyA x Polkadot Hackathon, bridging the gap between student talent and Web3 industry leaders and giving students a change to familiarise themselves with the Web3 ecosystem.",
+        "As Coding Society President, I spearheaded our participation in the EasyA x Polkadot Hackathon, bridging the gap between student talent and Web3 industry leaders and giving students a chance to familiarise themselves with the Web3 ecosystem.",
     },
   ];
 
   return (
-    <section
-      id="contact"
-      className={`${styles.contacts} ${visible ? styles.fadeIn : ""}`}
-    >
+    <section id="contact" className={styles.contacts}>
       <div>
-        <h2 className={styles.contactTitle}>PROJECTS</h2>
+        <div className={styles.sectionRibbon}>Projects</div>
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (
-            <div key={index} className={styles.projectCard}>
-              <div className={styles.imageContainer}>
+            <div key={index} className={styles.projectTile}>
+              <div className={styles.imageWrapper}>
                 <img
                   src={project.image}
                   alt={project.title}
                   className={styles.projectImage}
+                  loading="lazy"
                 />
               </div>
+              <span className={styles.tileKicker}>Project</span>
               <Link
                 href={project.link}
                 target="_blank"
-                className={styles.projectButton}
+                className={styles.tileTitle}
               >
                 {project.title}
               </Link>
-              <p className={styles.projectDescription}>{project.description}</p>
+              <p className={styles.tileDescription}>{project.description}</p>
             </div>
           ))}
         </div>
       </div>
-      <div>
-        <h2 className={styles.contactTitle}>HACKATHONS</h2>
-        <div className={styles.hackathonGrid}>
+
+      <div className={styles.hackathonSection}>
+        <div className={styles.sectionRibbon}>Hackathons</div>
+        <div className={styles.hackathonList}>
           {hackathons.map((hackathon, index) => (
-            <div key={index} className={styles.hackathonCard}>
-              <Link href={hackathon.link} target="_blank">
+            <div key={index} className={styles.hackathonItem}>
+              <span className={styles.tileKicker}>Hackathon</span>
+              <Link
+                href={hackathon.link}
+                target="_blank"
+                className={styles.hackathonTitle}
+              >
                 {hackathon.title}
               </Link>
-              <p className={styles.projectDescription}>
-                {hackathon.description}
-              </p>
+              <p className={styles.tileDescription}>{hackathon.description}</p>
             </div>
           ))}
         </div>

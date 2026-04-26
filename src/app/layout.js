@@ -1,24 +1,41 @@
-import { Geist, Geist_Mono, Inter, Noto_Sans_Arabic } from "next/font/google";
+import {
+  Playfair_Display,
+  Lora,
+  Work_Sans,
+  Space_Mono,
+  Inter,
+  Noto_Sans_Arabic,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import CursorHexEffect from "./components/CursorHexEffect";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-display",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lora = Lora({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
-const InterFont = Inter({
+const workSans = Work_Sans({
+  variable: "--font-ui",
+  subsets: ["latin"],
+});
+
+const spaceMono = Space_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const ArabicFont = Noto_Sans_Arabic({
+const arabicFont = Noto_Sans_Arabic({
   variable: "--font-arabic",
   subsets: ["arabic"],
 });
@@ -33,9 +50,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} ${InterFont.variable} ${ArabicFont.variable}`}
+        className={`${playfairDisplay.variable} ${lora.variable} ${workSans.variable} ${spaceMono.variable} ${inter.variable} ${arabicFont.variable}`}
       >
-        <CursorHexEffect />
         <Navbar />
         {children}
       </body>

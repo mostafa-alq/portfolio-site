@@ -1,7 +1,7 @@
 @keyframes blink {
   0%,
   49% {
-    border-right-color: white;
+    border-right-color: #057dbc;
   }
   50%,
   100% {
@@ -15,14 +15,14 @@
 }
 
 .typewriterText {
-  color: #ffffff;
+  color: #057dbc;
   font-weight: 600;
   font-size: inherit;
-  font-family: var(--font-heading);
+  font-family: var(--font-serif), helvetica, serif;
 }
 
 .cursor {
-  border-right: 2px solid #ffffff;
-  margin-left: 4px;
+  border-right: 2px solid #057dbc;
+  margin-left: 2px;
   animation: blink 0.7s infinite;
 }

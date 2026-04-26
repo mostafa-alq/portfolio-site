@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0d1117"/>
+
+  <!-- Top bar -->
+  <rect width="800" height="44" fill="#161b22"/>
+  <circle cx="22" cy="22" r="7" fill="#ff5f57"/>
+  <circle cx="46" cy="22" r="7" fill="#febc2e"/>
+  <circle cx="70" cy="22" r="7" fill="#28c840"/>
+  <text x="400" y="28" font-family="Monaco, Courier New, monospace" font-size="13" fill="#8b949e" text-anchor="middle">odd_even.halal</text>
+
+  <!-- Line numbers column -->
+  <rect x="0" y="44" width="56" height="556" fill="#0d1117"/>
+  <line x1="56" y1="44" x2="56" y2="600" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Line numbers (16px font, 30px line height, y_start=90) -->
+  <text x="42" y="90"  font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">1</text>
+  <text x="42" y="120" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">2</text>
+  <text x="42" y="180" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">4</text>
+  <text x="42" y="210" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">5</text>
+  <text x="42" y="240" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">6</text>
+  <text x="42" y="270" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">7</text>
+  <text x="42" y="300" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">8</text>
+  <text x="42" y="330" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">9</text>
+  <text x="42" y="360" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">10</text>
+  <text x="42" y="420" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">12</text>
+  <text x="42" y="450" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">13</text>
+  <text x="42" y="480" font-family="Monaco, Courier New, monospace" font-size="16" fill="#3d444d" text-anchor="end">14</text>
+
+  <!-- Line 1: READ -->
+  <text x="72" y="90" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">READ</text>
+
+  <!-- Line 2: JUMP.E0 L1 -->
+  <text x="72"  y="120" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">JUMP.E0</text>
+  <text x="149" y="120" font-family="Monaco, Courier New, monospace" font-size="16" fill="#e3b341">L1</text>
+
+  <!-- Line 4: LOOP: -->
+  <text x="72" y="180" font-family="Monaco, Courier New, monospace" font-size="16" fill="#e3b341">LOOP:</text>
+
+  <!-- Line 5: PUSH 2 -->
+  <text x="72"  y="210" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">PUSH</text>
+  <text x="120" y="210" font-family="Monaco, Courier New, monospace" font-size="16" fill="#f0883e">2</text>
+
+  <!-- Line 6: SUB -->
+  <text x="72" y="240" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">SUB</text>
+
+  <!-- Line 7: JUMP.E0 L1 -->
+  <text x="72"  y="270" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">JUMP.E0</text>
+  <text x="149" y="270" font-family="Monaco, Courier New, monospace" font-size="16" fill="#e3b341">L1</text>
+
+  <!-- Line 8: JUMP.G0 LOOP -->
+  <text x="72"  y="300" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">JUMP.G0</text>
+  <text x="149" y="300" font-family="Monaco, Courier New, monospace" font-size="16" fill="#e3b341">LOOP</text>
+
+  <!-- Line 9: PRINT "odd" -->
+  <text x="72"  y="330" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">PRINT</text>
+  <text x="130" y="330" font-family="Monaco, Courier New, monospace" font-size="16" fill="#a5d6ff">"</text>
+  <text x="140" y="330" font-family="Monaco, Courier New, monospace" font-size="16" fill="#7ee787">odd</text>
+  <text x="169" y="330" font-family="Monaco, Courier New, monospace" font-size="16" fill="#a5d6ff">"</text>
+
+  <!-- Line 10: HALT -->
+  <text x="72" y="360" font-family="Monaco, Courier New, monospace" font-size="16" fill="#ff7b72">HALT</text>
+
+  <!-- Line 12: L1: -->
+  <text x="72" y="420" font-family="Monaco, Courier New, monospace" font-size="16" fill="#e3b341">L1:</text>
+
+  <!-- Line 13: PRINT "even" -->
+  <text x="72"  y="450" font-family="Monaco, Courier New, monospace" font-size="16" fill="#79c0ff">PRINT</text>
+  <text x="130" y="450" font-family="Monaco, Courier New, monospace" font-size="16" fill="#a5d6ff">"</text>
+  <text x="140" y="450" font-family="Monaco, Courier New, monospace" font-size="16" fill="#7ee787">even</text>
+  <text x="178" y="450" font-family="Monaco, Courier New, monospace" font-size="16" fill="#a5d6ff">"</text>
+
+  <!-- Line 14: HALT -->
+  <text x="72" y="480" font-family="Monaco, Courier New, monospace" font-size="16" fill="#ff7b72">HALT</text>
+
+  <!-- watermark -->
+  <text x="740" y="582" font-family="Monaco, Courier New, monospace" font-size="12" fill="#3d444d" text-anchor="end">halal_lang</text>
+</svg>

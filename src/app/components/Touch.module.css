@@ -1,72 +1,65 @@
 .touchSection {
-  opacity: 0;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 0px;
-  padding: 32px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: none;
-  border: 1px solid transparent;
-  margin: 24px auto 64px;
-  max-width: 960px;
-  animation: fadeIn 2s ease-out;
-  animation-delay: 2.5s;
-  animation-fill-mode: both;
-  backdrop-filter: blur(3px);
+  padding: 48px 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  margin: 0 0 64px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.kicker {
+  display: block;
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 12px;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  font-family: var(--font-heading);
-  align-items: center;
+  font-family: var(--font-display), helvetica, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.28px;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+  max-width: 600px;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 16px;
-  font-family: var(--font-copy);
-  line-height: 1.6;
-  letter-spacing: 0.008em;
-  color: #d0d0d0;
+  font-family: var(--font-serif), helvetica, serif;
+  font-size: 17px;
+  line-height: 1.47;
+  color: #757575;
+  margin-bottom: 32px;
+  max-width: 480px;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 0px;
-  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-ui), helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 12px 24px;
+  border: 2px solid #000000;
+  border-radius: 0;
   text-decoration: none;
-  transition: all 0.3s ease;
-  font-family: var(--font-heading);
-  letter-spacing: 0.01em;
-}
-
-.button::before {
-  content: "[";
-  margin-right: 10px;
-}
-
-.button::after {
-  content: "]";
-  margin-left: 10px;
+  transition: background-color 150ms, color 150ms;
 }
 
 .button:hover {
-  opacity: 0.7;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 28px;
+  }
 }

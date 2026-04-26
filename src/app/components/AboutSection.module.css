@@ -1,177 +1,104 @@
-.aboutSection {
-  text-align: center;
-}
-
 .aboutSectionFat {
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 8px;
-  box-sizing: border-box;
+}
+
+.heroSection {
+  padding: 48px 0 32px;
+}
+
+.kicker {
+  display: block;
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.headline {
+  font-family: var(--font-display), helvetica, serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.arabicName {
+  font-family: var(--font-arabic), helvetica, serif;
+  font-size: 20px;
+  color: #757575;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sectionRule {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 0 0 40px;
 }
 
 .aboutCopy {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-@keyframes swipeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.introText {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 10px;
-  animation: swipeIn 1s ease-out;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  font-family: var(--font-heading);
-}
-
-.subtitleText {
-  font-size: 1.1rem;
-  text-align: center;
-  color: #b9b9b9;
-  font-family: var(--font-copy);
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  animation: swipeIn 1s ease-out;
-  animation-delay: 0.8s;
-  animation-fill-mode: both;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  max-width: 720px;
+  margin-bottom: 32px;
 }
 
 .descriptionText {
-  font-size: 1.3rem;
-  line-height: 1.75;
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-  font-family: var(--font-copy);
-  font-weight: 400;
-  letter-spacing: 0.005em;
-  animation: swipeIn 1s ease-out;
-  animation-delay: 0.8s;
-  animation-fill-mode: both;
+  font-family: var(--font-serif), helvetica, serif;
+  font-size: 19px;
+  line-height: 1.47;
+  letter-spacing: 0.108px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
 }
 
-.descriptionText span,
-.introText span {
-  color: #999999;
-}
-
-.findOutMore {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.findOutMore button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-  font-size: 2rem;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  border-radius: 0px;
-  background-color: transparent;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto;
-  position: relative;
-
-  animation: fadeIn 2s ease-out;
-  animation-delay: 2.5s;
-  animation-fill-mode: both;
-
-  font-family: var(--font-heading);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.findOutMore button::before {
-  content: "[";
-  margin-right: 10px;
-}
-
-.findOutMore button::after {
-  content: "]";
-  margin-left: 10px;
-}
-
-.findOutMore button:hover {
-  opacity: 0.7;
-  cursor: pointer;
+.subtitleText {
+  font-family: var(--font-serif), helvetica, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #757575;
+  margin-bottom: 0;
 }
 
 .socialContainer {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
   gap: 12px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  width: max-content;
-  animation: swipeIn 1s ease-out;
-  animation-delay: 0.8s;
-  animation-fill-mode: both;
+  margin-bottom: 40px;
 }
 
 .socialButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #757575;
+  color: #1a1a1a;
   text-decoration: none;
-  transition: opacity 0.3s ease;
-  flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  padding: 0;
+  transition: color 120ms, border-color 120ms;
 }
 
 .socialButton:hover {
-  background-color: transparent;
-  border-radius: 0px;
+  color: #057dbc;
+  border-color: #057dbc;
 }
 
-.socialButton:hover svg {
-  color: #ffffff;
-  stroke: #ffffff;
-}
+@media (max-width: 767px) {
+  .headline {
+    font-size: 36px;
+    line-height: 1.1;
+  }
 
-.socialButton svg {
-  color: #ffffff;
-  stroke: #ffffff;
-}
+  .heroSection {
+    padding: 32px 0 24px;
+  }
 
-.iconWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .descriptionText {
+    font-size: 16px;
+  }
 }

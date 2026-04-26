@@ -4,15 +4,37 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>© Mostafa Alqadi. All rights reserved.</p>
-      <p>
-        Built with<Link href="https://reactjs.org/">React</Link>and
-        <Link href="https://aceternity.com/">NextJS.</Link>Source available on
-        <Link href="https://github.com/mostafa-alq/portfolio-site">
-          GitHub.
-        </Link>
-      </p>
-      <p>📍 London, UK</p>
+      <div className={styles.footerInner}>
+        <span className={styles.name}>Mostafa Alqadi</span>
+        <div className={styles.footerLinks}>
+          <Link
+            href="https://reactjs.org/"
+            target="_blank"
+            className={styles.footerLink}
+          >
+            React
+          </Link>
+          <span className={styles.sep}>·</span>
+          <Link
+            href="https://nextjs.org/"
+            target="_blank"
+            className={styles.footerLink}
+          >
+            Next.js
+          </Link>
+          <span className={styles.sep}>·</span>
+          <Link
+            href="https://github.com/mostafa-alq/portfolio-site"
+            target="_blank"
+            className={styles.footerLink}
+          >
+            GitHub
+          </Link>
+        </div>
+        <p className={styles.copy}>
+          © Mostafa Alqadi. All rights reserved. London, UK.
+        </p>
+      </div>
     </footer>
   );
 }

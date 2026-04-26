@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.utilityBar {
+  background: #000000;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.utilityText {
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.mainNav {
+  background: #ffffff;
+  border-bottom: 1px solid #000000;
+  height: 60px;
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+}
+
+.logoLink {
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoLink:hover {
+  color: #000000;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLink {
+  font-family: var(--font-ui), helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 120ms;
+}
+
+.navLink:hover {
+  color: #057dbc;
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #000000;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 0;
+    border-bottom: 1px solid #000000;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinks li {
+    border-bottom: 1px solid #e2e8f0;
+    width: 100%;
+  }
+
+  .navLink {
+    display: block;
+    padding: 14px 0;
+  }
+}
