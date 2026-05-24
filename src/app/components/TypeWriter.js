@@ -6,10 +6,11 @@ export default function TypeWriter() {
   const words = [
     "Python",
     "JavaScript",
-    "Web Development",
-    "Java",
     "Data Science",
     "Machine Learning",
+    "Game Development",
+    "Artificial Intelligence",
+    "Java"
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
