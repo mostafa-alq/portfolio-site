@@ -1,7 +1,8 @@
-import styles from "./ContactSection.module.css";
+import styles from "./ProjectsSection.module.css";
 import Link from "next/link";
+import LatestPost from "./LatestPost";
 
-function ContactSection({ visible }) {
+function ProjectsSection() {
   const projects = [
     {
       title: "Raycaster Engine",
@@ -48,7 +49,7 @@ function ContactSection({ visible }) {
   ];
 
   return (
-    <section id="contact" className={styles.contacts}>
+    <section id="projects" className={styles.projects}>
       <div>
         <div className={styles.sectionRibbon}>Projects</div>
         <div className={styles.projectsGrid}>
@@ -76,6 +77,8 @@ function ContactSection({ visible }) {
         </div>
       </div>
 
+      <LatestPost />
+
       <div className={styles.hackathonSection}>
         <div className={styles.sectionRibbon}>Hackathons</div>
         <div className={styles.hackathonList}>
@@ -98,4 +101,4 @@ function ContactSection({ visible }) {
   );
 }
 
-export default ContactSection;
+export default ProjectsSection;

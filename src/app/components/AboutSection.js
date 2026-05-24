@@ -1,6 +1,5 @@
 "use client";
 import styles from "./AboutSection.module.css";
-import ContactSection from "./ContactSection";
 import TypeWriter from "./TypeWriter";
 import { Github, Linkedin } from "lucide-react";
 
@@ -49,9 +48,6 @@ function AboutSection() {
         </a>
       </div>
 
-      <hr className={styles.sectionRule} />
-
-      <ContactSection visible={true} />
     </section>
   );
 }

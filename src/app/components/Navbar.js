@@ -30,7 +30,7 @@ function Navbar() {
           <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
             <li>
               <Link
-                href="#about"
+                href="/#about"
                 className={styles.navLink}
                 onClick={() => setMenuOpen(false)}
               >
@@ -39,7 +39,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="#contact"
+                href="/#projects"
                 className={styles.navLink}
                 onClick={() => setMenuOpen(false)}
               >
@@ -48,11 +48,11 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="#touch"
+                href="/blog"
                 className={styles.navLink}
                 onClick={() => setMenuOpen(false)}
               >
-                Contact
+                Blog
               </Link>
             </li>
           </ul>

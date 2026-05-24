@@ -8,19 +8,18 @@ function Footer() {
         <span className={styles.name}>Mostafa Alqadi</span>
         <div className={styles.footerLinks}>
           <Link
-            href="https://reactjs.org/"
-            target="_blank"
+            href="mailto:mostafaalqadi05@gmail.com"
             className={styles.footerLink}
           >
-            React
+            Email
           </Link>
           <span className={styles.sep}>·</span>
           <Link
-            href="https://nextjs.org/"
+            href="https://github.com/mostafa-alq"
             target="_blank"
             className={styles.footerLink}
           >
-            Next.js
+            GitHub
           </Link>
           <span className={styles.sep}>·</span>
           <Link
@@ -28,7 +27,7 @@ function Footer() {
             target="_blank"
             className={styles.footerLink}
           >
-            GitHub
+            Source
           </Link>
         </div>
         <p className={styles.copy}>

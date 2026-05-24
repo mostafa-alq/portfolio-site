@@ -1,5 +1,5 @@
 import AboutSection from "./components/AboutSection";
-import Touch from "./components/Touch";
+import ProjectsSection from "./components/ProjectsSection";
 import Footer from "./components/Footer";
 
 function HomePage() {
@@ -7,7 +7,7 @@ function HomePage() {
     <>
       <div className="siteContainer">
         <AboutSection />
-        <Touch />
+        <ProjectsSection />
       </div>
       <Footer />
     </>

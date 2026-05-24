@@ -1,0 +1,130 @@
+.post {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.back {
+  display: inline-block;
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #757575;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 120ms;
+}
+
+.back:hover {
+  color: #057dbc;
+}
+
+.date {
+  display: block;
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  color: #757575;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-display), helvetica, serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+}
+
+.description {
+  font-family: var(--font-serif), helvetica, serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #757575;
+  margin: 0;
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 32px 0;
+}
+
+.body {
+  font-family: var(--font-serif), helvetica, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #1a1a1a;
+}
+
+.body h2 {
+  font-family: var(--font-display), helvetica, serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 40px 0 16px;
+}
+
+.body h3 {
+  font-family: var(--font-display), helvetica, serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 32px 0 12px;
+}
+
+.body p {
+  margin: 0 0 20px;
+}
+
+.body a {
+  color: #057dbc;
+  text-decoration: underline;
+}
+
+.body code {
+  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  background: #f4f4f4;
+  padding: 2px 6px;
+}
+
+.body pre {
+  background: #1a1a1a;
+  color: #f4f4f4;
+  padding: 20px;
+  overflow-x: auto;
+  margin: 0 0 24px;
+}
+
+.body pre code {
+  background: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.body ul,
+.body ol {
+  padding-left: 24px;
+  margin: 0 0 20px;
+}
+
+.body li {
+  margin-bottom: 6px;
+}
+
+.body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 30px;
+  }
+}

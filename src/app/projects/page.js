@@ -1,4 +1,4 @@
-import ProjectsSection from "../components/ContactSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 function Project() {
   return <ProjectsSection />;
