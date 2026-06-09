@@ -1,4 +1,4 @@
-# Mostafa Alqadi — Portfolio
+# Mostafa Alqadi - Portfolio site
 
 Personal portfolio site built with [Next.js](https://nextjs.org).
 
