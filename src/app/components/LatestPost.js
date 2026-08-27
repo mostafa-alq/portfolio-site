@@ -9,7 +9,8 @@ function LatestPost() {
 
   return (
     <section className={styles.section}>
-      <div className={styles.sectionRibbon}>Latest Blog</div>
+      <h2 className="sectionTitle">Latest Blog</h2>
+      <hr className="ornRule" />
       <div className={styles.card}>
         <span className={styles.date}>{latest.date}</span>
         <Link href={`/blog/${latest.slug}`} className={styles.title}>

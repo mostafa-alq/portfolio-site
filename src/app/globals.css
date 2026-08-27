@@ -1,10 +1,28 @@
 :root {
-  --wired-black: #000000;
-  --page-ink: #1a1a1a;
-  --paper-white: #ffffff;
-  --link-blue: #057dbc;
-  --caption-gray: #757575;
-  --hairline-tint: #e2e8f0;
+  /* Palette drawn from bg1.png — Art Nouveau lily wallpaper */
+  --parchment: #ece8d5;        /* warm cream page ground */
+  --parchment-deep: #e2ddc4;   /* slightly deeper cream */
+  --sage-mist: #d5ddca;        /* pale celadon */
+  --sage: #8fa585;             /* mid sage green */
+  --sage-deep: #47563c;        /* forest ribbon / dark UI */
+  --forest-ink: #2f3a28;       /* primary text */
+  --forest-ink-soft: #4c5a41;  /* secondary text */
+  --olive-gray: #6b6b52;       /* captions / kickers */
+  --gold-line: #b08d4c;        /* hairlines & rules */
+  --gold-deep: #8a6d34;        /* stronger gold */
+  --teal-accent: #3f7a6d;      /* interactive / links (from medallion) */
+  --teal-accent-dark: #2f5f54;
+  --lavender: #8f7f9c;         /* soft decorative accent */
+  --cream-card: #e3e3ce;       /* raised card fill — soft aged parchment */
+  --divider-fill: #c2b088;     /* muted tan-gold for the section dividers */
+
+  /* Legacy aliases kept so existing rules resolve on-theme */
+  --wired-black: var(--forest-ink);
+  --page-ink: var(--forest-ink);
+  --paper-white: var(--parchment);
+  --link-blue: var(--teal-accent);
+  --caption-gray: var(--olive-gray);
+  --hairline-tint: rgba(176, 141, 76, 0.32);
   --font-size-base: 16px;
 }
 
@@ -13,22 +31,54 @@
 }
 
 body {
-  background: var(--paper-white);
+  background: #cdd6c0; /* soft sage base so page edges read green, not cream */
   margin: 0;
   padding: 0;
   width: 100%;
   font-size: var(--font-size-base);
   line-height: 1.5;
   font-family: var(--font-inter), helvetica, sans-serif;
-  color: var(--page-ink);
-  margin-top: 96px;
+  color: var(--forest-ink);
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Faint wallpaper texture pulled straight from bg1.png */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("/bg1.png");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+  filter: saturate(1.3) brightness(0.98);
+  pointer-events: none;
+}
+
+/* Thin sage wash — keeps copy legible without washing the green to cream */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      120% 85% at 50% 0%,
+      rgba(202, 213, 188, 0.12) 0%,
+      rgba(197, 209, 182, 0.36) 55%,
+      rgba(188, 201, 170, 0.48) 100%
+    );
+  pointer-events: none;
 }
 
 .siteContainer {
-  width: min(100%, 960px);
+  width: min(100%, 1120px);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   box-sizing: border-box;
 }
 
@@ -39,7 +89,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display), helvetica, serif;
-  color: var(--page-ink);
+  color: var(--forest-ink);
   margin-top: 0;
 }
 
@@ -47,25 +97,69 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
-  color: var(--page-ink);
+  color: var(--forest-ink);
 }
 
 a {
-  color: var(--page-ink);
+  color: var(--forest-ink);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-blue);
+  color: var(--teal-accent);
 }
 
 hr {
   border: none;
-  border-top: 1px solid var(--hairline-tint);
+  border-top: 1px solid var(--gold-line);
   margin: 0;
 }
 
 section[id],
 div[id] {
-  scroll-margin-top: 112px;
+  scroll-margin-top: 24px;
+}
+
+/* Section heading in the display serif — pairs with .ornRule below it */
+.sectionTitle {
+  font-family: var(--font-display), helvetica, serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+  color: var(--forest-ink);
+  margin: 0 0 6px;
+}
+
+/* Art Nouveau divider: a gold-edged khaki rule with a matching diamond centred on it */
+.ornRule {
+  border: none;
+  height: 16px;
+  margin: 0 0 24px;
+  position: relative;
+  overflow: visible;
+}
+
+.ornRule::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background: var(--divider-fill);
+  border: 1px solid var(--gold-deep);
+}
+
+.ornRule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--divider-fill);
+  border: 1px solid var(--gold-deep);
 }

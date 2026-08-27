@@ -5,7 +5,6 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerInner}>
-        <span className={styles.name}>Mostafa Alqadi</span>
         <div className={styles.footerLinks}>
           <Link
             href="mailto:mostafaalqadi05@gmail.com"
@@ -30,9 +29,6 @@ function Footer() {
             Source
           </Link>
         </div>
-        <p className={styles.copy}>
-          © Mostafa Alqadi. All rights reserved. London, UK.
-        </p>
       </div>
     </footer>
   );

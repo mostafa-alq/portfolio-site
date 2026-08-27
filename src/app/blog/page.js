@@ -12,7 +12,8 @@ export default function BlogIndex() {
   return (
     <div className="siteContainer">
       <section className={styles.blogIndex}>
-        <div className={styles.sectionRibbon}>Blog</div>
+        <h2 className="sectionTitle">Blog</h2>
+        <hr className="ornRule" />
         {posts.length === 0 ? (
           <p className={styles.empty}>No posts yet.</p>
         ) : (

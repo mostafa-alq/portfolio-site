@@ -3,39 +3,36 @@
   padding-bottom: 0;
 }
 
-.sectionRibbon {
-  background: #000000;
-  color: #ffffff;
-  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding: 10px 16px;
-  margin-bottom: 0;
-}
-
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid #000000;
-  border-left: 1px solid #000000;
-  margin-bottom: 48px;
+  gap: 28px;
+  margin-bottom: 56px;
 }
 
 .projectTile {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-  padding-bottom: 24px;
+  background: var(--cream-card);
+  border: 1px solid var(--hairline-tint);
+  border-radius: 3px;
+  overflow: hidden;
+  padding-bottom: 22px;
+  box-shadow: 0 4px 14px rgba(71, 86, 60, 0.07);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.projectTile:hover {
+  box-shadow: 0 8px 22px rgba(71, 86, 60, 0.13);
+  transform: translateY(-2px);
 }
 
 .imageWrapper {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--hairline-tint);
 }
 
 .projectImage {
@@ -43,79 +40,51 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0;
+  filter: saturate(0.92);
 }
 
 .tileKicker {
   display: block;
   font-family: var(--font-mono), "Monaco", "Courier New", monospace;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.92px;
   text-transform: uppercase;
-  color: #757575;
-  margin: 0 16px 6px;
+  color: var(--olive-gray);
+  margin: 0 22px 6px;
 }
 
 .tileTitle {
   display: block;
   font-family: var(--font-display), helvetica, serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.18;
-  color: #1a1a1a;
+  color: var(--forest-ink);
   text-decoration: none;
-  margin: 0 16px 10px;
+  margin: 0 22px 10px;
   transition: color 120ms;
 }
 
 .tileTitle:hover {
-  color: #057dbc;
+  color: var(--teal-accent);
   text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--gold-line);
 }
 
 .tileDescription {
   font-family: var(--font-serif), helvetica, serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #1a1a1a;
-  margin: 0 16px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--forest-ink-soft);
+  margin: 0 22px;
   flex-grow: 1;
 }
 
-.hackathonSection {
-  margin-top: 0;
-}
-
-.hackathonList {
-  margin-bottom: 0;
-}
-
-.hackathonItem {
-  padding: 24px 0;
-  border-top: 1px solid #000000;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.hackathonTitle {
-  font-family: var(--font-display), helvetica, serif;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.18;
-  color: #1a1a1a;
-  text-decoration: none;
-  transition: color 120ms;
-}
-
-.hackathonTitle:hover {
-  color: #057dbc;
-  text-decoration: underline;
-}
-
-@media (max-width: 599px) {
+@media (max-width: 720px) {
   .projectsGrid {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 }

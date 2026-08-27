@@ -3,18 +3,7 @@
 }
 
 .heroSection {
-  padding: 28px 0 20px;
-}
-
-.kicker {
-  display: block;
-  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1.1px;
-  text-transform: uppercase;
-  color: #1a1a1a;
-  margin-bottom: 12px;
+  padding: 48px 0 20px;
 }
 
 .headline {
@@ -23,22 +12,16 @@
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.5px;
-  color: #1a1a1a;
+  color: var(--forest-ink);
   margin: 0 0 8px 0;
 }
 
 .arabicName {
   font-family: var(--font-arabic), helvetica, serif;
   font-size: 20px;
-  color: #757575;
+  color: var(--forest-ink-soft);
   margin: 0;
   line-height: 1.4;
-}
-
-.sectionRule {
-  border: none;
-  border-top: 1px solid #000000;
-  margin: 0 0 24px;
 }
 
 .aboutCopy {
@@ -51,7 +34,7 @@
   font-size: 19px;
   line-height: 1.47;
   letter-spacing: 0.108px;
-  color: #1a1a1a;
+  color: var(--forest-ink);
   margin-bottom: 16px;
 }
 
@@ -59,7 +42,7 @@
   font-family: var(--font-serif), helvetica, serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #757575;
+  color: var(--olive-gray);
   margin-bottom: 0;
 }
 
@@ -77,15 +60,17 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #757575;
-  color: #1a1a1a;
+  border: 1px solid var(--gold-line);
+  color: var(--forest-ink);
+  background: var(--cream-card);
   text-decoration: none;
-  transition: color 120ms, border-color 120ms;
+  transition: color 120ms, border-color 120ms, background 120ms;
 }
 
 .socialButton:hover {
-  color: #057dbc;
-  border-color: #057dbc;
+  color: var(--parchment);
+  border-color: var(--teal-accent-dark);
+  background: var(--teal-accent);
 }
 
 @media (max-width: 767px) {

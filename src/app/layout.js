@@ -7,7 +7,6 @@ import {
   Noto_Sans_Arabic,
 } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-display",
@@ -52,7 +51,6 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${playfairDisplay.variable} ${lora.variable} ${workSans.variable} ${spaceMono.variable} ${inter.variable} ${arabicFont.variable}`}
       >
-        <Navbar />
         {children}
       </body>
     </html>

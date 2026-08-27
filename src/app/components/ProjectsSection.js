@@ -33,25 +33,11 @@ function ProjectsSection() {
         "A RESTful API built with JAX-RS and Grizzly to manage campus rooms and sensors. Features sub-resource locators, HATEOAS links, custom exception mapping, and request logging via container filters.",
     },
   ];
-  const hackathons = [
-    {
-      title: "Rivers @ KCL",
-      link: "https://www.kcl.ac.uk/events/rivers-hackathon",
-      description:
-        "Collaborated directly with environmental conservationists to conduct a supply chain analysis and impact audit of various firms, leveraging open-source data to identify high-risk corporations and their effect on the ecosystem.",
-    },
-    {
-      title: "EasyA x Polkadot",
-      link: "https://www.easya.io/events/easya-x-polkadot-london-hackathon-2",
-      description:
-        "As Coding Society President, I spearheaded our participation in the EasyA x Polkadot Hackathon, bridging the gap between student talent and Web3 industry leaders and giving students a chance to familiarise themselves with the Web3 ecosystem.",
-    },
-  ];
-
   return (
     <section id="projects" className={styles.projects}>
       <div>
-        <div className={styles.sectionRibbon}>Projects</div>
+        <h2 className="sectionTitle">Projects</h2>
+        <hr className="ornRule" />
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (
             <div key={index} className={styles.projectTile}>
@@ -78,25 +64,6 @@ function ProjectsSection() {
       </div>
 
       <LatestPost />
-
-      <div className={styles.hackathonSection}>
-        <div className={styles.sectionRibbon}>Hackathons</div>
-        <div className={styles.hackathonList}>
-          {hackathons.map((hackathon, index) => (
-            <div key={index} className={styles.hackathonItem}>
-              <span className={styles.tileKicker}>Hackathon</span>
-              <Link
-                href={hackathon.link}
-                target="_blank"
-                className={styles.hackathonTitle}
-              >
-                {hackathon.title}
-              </Link>
-              <p className={styles.tileDescription}>{hackathon.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

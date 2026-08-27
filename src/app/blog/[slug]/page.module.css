@@ -11,14 +11,14 @@
   font-weight: 400;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #757575;
+  color: var(--olive-gray);
   text-decoration: none;
   margin-bottom: 32px;
   transition: color 120ms;
 }
 
 .back:hover {
-  color: #057dbc;
+  color: var(--teal-accent);
 }
 
 .date {
@@ -27,7 +27,7 @@
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.8px;
-  color: #757575;
+  color: var(--olive-gray);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -38,7 +38,7 @@
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.3px;
-  color: #1a1a1a;
+  color: var(--forest-ink);
   margin: 0 0 16px;
 }
 
@@ -46,13 +46,15 @@
   font-family: var(--font-serif), helvetica, serif;
   font-size: 18px;
   line-height: 1.5;
-  color: #757575;
+  color: var(--olive-gray);
   margin: 0;
 }
 
 .rule {
   border: none;
-  border-top: 1px solid #000000;
+  border-top: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+  height: 3px;
   margin: 32px 0;
 }
 
@@ -60,7 +62,7 @@
   font-family: var(--font-serif), helvetica, serif;
   font-size: 17px;
   line-height: 1.65;
-  color: #1a1a1a;
+  color: var(--forest-ink);
 }
 
 .body h2 {
@@ -82,27 +84,32 @@
 }
 
 .body a {
-  color: #057dbc;
+  color: var(--teal-accent);
   text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--gold-line);
 }
 
 .body code {
   font-family: var(--font-mono), "Monaco", "Courier New", monospace;
   font-size: 14px;
-  background: #f4f4f4;
+  background: var(--parchment-deep);
+  border: 1px solid var(--hairline-tint);
   padding: 2px 6px;
 }
 
 .body pre {
-  background: #1a1a1a;
-  color: #f4f4f4;
+  background: var(--sage-deep);
+  color: var(--parchment);
   padding: 20px;
   overflow-x: auto;
   margin: 0 0 24px;
+  border-left: 3px solid var(--gold-deep);
 }
 
 .body pre code {
   background: none;
+  border: none;
   padding: 0;
   font-size: 14px;
 }
@@ -117,10 +124,19 @@
   margin-bottom: 6px;
 }
 
+.body blockquote {
+  margin: 0 0 24px;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--lavender);
+  color: var(--forest-ink-soft);
+  font-style: italic;
+}
+
 .body img {
   max-width: 100%;
   height: auto;
   display: block;
+  border: 1px solid var(--hairline-tint);
 }
 
 @media (max-width: 767px) {

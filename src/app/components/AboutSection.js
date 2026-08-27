@@ -7,12 +7,11 @@ function AboutSection() {
   return (
     <section className={styles.aboutSectionFat} id="about">
       <div className={styles.heroSection}>
-        <span className={styles.kicker}>PORTFOLIO · CS · WESTMINSTER</span>
         <h1 className={styles.headline}>Mostafa Alqadi</h1>
         <p className={styles.arabicName}>[مصطفى القاضي]</p>
       </div>
 
-      <hr className={styles.sectionRule} />
+      <hr className="ornRule" />
 
       <div className={styles.aboutCopy}>
         <p className={styles.descriptionText}>
