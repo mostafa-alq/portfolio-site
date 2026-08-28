@@ -23,7 +23,26 @@
   --link-blue: var(--teal-accent);
   --caption-gray: var(--olive-gray);
   --hairline-tint: rgba(176, 141, 76, 0.32);
-  --font-size-base: 16px;
+
+  /* Fluid scale — every size below grows/shrinks with the viewport so the
+     one-screen layout stays in proportion across desktop sizes. Reference
+     ~1440px wide; clamped so it never collapses on laptops or balloons on
+     large monitors. */
+  --font-size-base: clamp(14px, 0.7rem + 0.3vw, 16.5px);
+  --h-display: clamp(30px, 0.9rem + 1.9vw, 52px);
+  --h-section: clamp(19px, 0.7rem + 0.7vw, 26px);
+  --text-body: clamp(13.5px, 0.6rem + 0.4vw, 17px);
+  --text-small: clamp(11.5px, 0.55rem + 0.2vw, 13.5px);
+  --rule-gap: clamp(11px, 0.4rem + 0.7vw, 18px);
+  --head-pad-top: clamp(10px, 0.2rem + 1vw, 22px);
+  --head-pad-bottom: clamp(7px, 0.2rem + 0.6vw, 13px);
+  --col-gap: clamp(32px, 0.5rem + 4vw, 84px);
+  --stack-gap: clamp(10px, 0.2rem + 0.8vw, 18px);
+  --shell-pad-x: clamp(20px, 0.5rem + 2.6vw, 56px);
+  --shell-pad-top: clamp(10px, 0.2rem + 1vw, 22px);
+  --shell-pad-bottom: clamp(14px, 0.4rem + 1.3vw, 28px);
+
+  --radius-card: 8px;
 }
 
 * {
@@ -96,7 +115,7 @@ h6 {
 p {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--forest-ink);
 }
 
@@ -123,19 +142,19 @@ div[id] {
 /* Section heading in the display serif — pairs with .ornRule below it */
 .sectionTitle {
   font-family: var(--font-display), helvetica, serif;
-  font-size: 30px;
+  font-size: var(--h-section);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.3px;
   color: var(--forest-ink);
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 
 /* Art Nouveau divider: a gold-edged khaki rule with a matching diamond centred on it */
 .ornRule {
   border: none;
-  height: 16px;
-  margin: 0 0 24px;
+  height: 12px;
+  margin: 0 0 var(--rule-gap);
   position: relative;
   overflow: visible;
 }

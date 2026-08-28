@@ -7,13 +7,6 @@ function Footer() {
       <div className={styles.footerInner}>
         <div className={styles.footerLinks}>
           <Link
-            href="mailto:mostafaalqadi05@gmail.com"
-            className={styles.footerLink}
-          >
-            Email
-          </Link>
-          <span className={styles.sep}>·</span>
-          <Link
             href="https://github.com/mostafa-alq"
             target="_blank"
             className={styles.footerLink}

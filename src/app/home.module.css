@@ -1,0 +1,75 @@
+/* Home: narrow left column (name over blog) + wide projects area, one screen */
+.viewport {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+}
+
+.columns {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  gap: var(--col-gap);
+  width: min(100%, 92vw, 1500px);
+  margin: 0 auto;
+  padding: var(--shell-pad-top) var(--shell-pad-x) var(--shell-pad-bottom);
+  box-sizing: border-box;
+}
+
+/* Left column: About above Latest Blog above Connect. The blog list is the
+   flexible piece — it gives up height first so the column fits one screen
+   without scrolling and Connect stays visible. Only when even a squeezed
+   blog list can't fit (page zoomed well in) does the page start to scroll. */
+.sidebar {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap);
+}
+
+.sidebar > * {
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+/* The blog section is the only one allowed to shrink when space is tight —
+   About and Connect keep their natural height, and any spare space collects
+   at the bottom rather than detaching the "All blogs" link. */
+.sidebar > *:nth-child(2) {
+  flex: 0 1 auto;
+}
+
+/* Right area: projects fill the remaining two-thirds */
+.main {
+  flex: 1.9 1 0;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 960px) {
+  .viewport {
+    height: auto;
+    overflow: visible;
+  }
+
+  .columns {
+    flex-direction: column;
+    gap: 32px;
+    padding: 20px 24px 20px;
+  }
+
+  .sidebar,
+  .main {
+    overflow: visible;
+  }
+
+  .main {
+    border-top: 1px solid var(--hairline-tint);
+    padding-top: 32px;
+  }
+}

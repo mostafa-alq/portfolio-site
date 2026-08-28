@@ -3,26 +3,31 @@ import { getAllPosts } from "../../lib/posts";
 import styles from "./LatestPost.module.css";
 
 function LatestPost() {
-  const posts = getAllPosts();
+  const posts = getAllPosts().slice(0, 2);
   if (posts.length === 0) return null;
-  const latest = posts[0];
 
   return (
     <section className={styles.section}>
       <h2 className="sectionTitle">Latest Blog</h2>
       <hr className="ornRule" />
-      <div className={styles.card}>
-        <span className={styles.date}>{latest.date}</span>
-        <Link href={`/blog/${latest.slug}`} className={styles.title}>
-          {latest.title}
-        </Link>
-        {latest.description && (
-          <p className={styles.description}>{latest.description}</p>
-        )}
-        <Link href="/blog" className={styles.allLink}>
-          All blogs →
-        </Link>
+      <div className={styles.list}>
+        {posts.map((post) => (
+          <div key={post.slug} className={styles.item}>
+            <div className={styles.itemHead}>
+              <Link href={`/blog/${post.slug}`} className={styles.title}>
+                {post.title}
+              </Link>
+              <span className={styles.date}>{post.date}</span>
+            </div>
+            {post.description && (
+              <p className={styles.description}>{post.description}</p>
+            )}
+          </div>
+        ))}
       </div>
+      <Link href="/blog" className={styles.allLink}>
+        All blogs →
+      </Link>
     </section>
   );
 }

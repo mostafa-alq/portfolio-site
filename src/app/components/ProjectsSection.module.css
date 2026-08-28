@@ -1,23 +1,62 @@
 .projects {
   width: 100%;
   padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
 }
 
+.projectsInner {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+/* Mirrors the hero name block so the divider lines up across columns */
+.projectsHead {
+  padding: var(--head-pad-top) 0 var(--head-pad-bottom);
+}
+
+.projectsHeading {
+  font-family: var(--font-display), helvetica, serif;
+  font-size: var(--h-display);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  color: var(--forest-ink);
+  margin: 0 0 6px 0;
+}
+
+@media (max-width: 767px) {
+  .projectsHeading {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+}
+
+/* Grid fills the column and divides the height evenly across however many
+   rows there are, so any number of projects scales to fit one screen. */
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-bottom: 56px;
+  grid-auto-rows: minmax(0, 1fr);
+  align-content: stretch;
+  gap: clamp(10px, 0.3rem + 0.7vw, 16px);
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .projectTile {
+  min-height: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: var(--cream-card);
   border: 1px solid var(--hairline-tint);
-  border-radius: 3px;
+  border-radius: var(--radius-card);
   overflow: hidden;
-  padding-bottom: 22px;
   box-shadow: 0 4px 14px rgba(71, 86, 60, 0.07);
   transition: box-shadow 160ms ease, transform 160ms ease;
 }
@@ -28,11 +67,10 @@
 }
 
 .imageWrapper {
-  width: 100%;
-  aspect-ratio: 16 / 10;
+  flex: 0 0 clamp(132px, 10vw + 32px, 216px);
+  align-self: stretch;
   overflow: hidden;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--hairline-tint);
+  border-right: 1px solid var(--hairline-tint);
 }
 
 .projectImage {
@@ -43,26 +81,38 @@
   filter: saturate(0.92);
 }
 
+.tileContent {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(9px, 0.8vw, 14px) clamp(11px, 1vw, 16px);
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
 .tileKicker {
   display: block;
   font-family: var(--font-mono), "Monaco", "Courier New", monospace;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 400;
-  letter-spacing: 0.92px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   color: var(--olive-gray);
-  margin: 0 22px 6px;
+  margin: 0 0 2px;
 }
 
 .tileTitle {
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   font-family: var(--font-display), helvetica, serif;
-  font-size: 24px;
+  font-size: clamp(13px, 0.5rem + 0.35vw, 16px);
   font-weight: 400;
   line-height: 1.18;
   color: var(--forest-ink);
   text-decoration: none;
-  margin: 0 22px 10px;
+  margin: 0 0 3px;
   transition: color 120ms;
 }
 
@@ -74,17 +124,29 @@
 }
 
 .tileDescription {
+  flex: 1;
+  min-height: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
   font-family: var(--font-serif), helvetica, serif;
-  font-size: 14.5px;
-  line-height: 1.55;
+  font-size: clamp(10.5px, 0.45rem + 0.15vw, 12px);
+  line-height: 1.45;
   color: var(--forest-ink-soft);
-  margin: 0 22px;
-  flex-grow: 1;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    overflow: visible;
+  }
 }
 
 @media (max-width: 720px) {
-  .projectsGrid {
-    grid-template-columns: 1fr;
-    gap: 22px;
+  .imageWrapper {
+    flex-basis: 128px;
   }
 }

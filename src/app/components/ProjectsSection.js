@@ -1,6 +1,5 @@
 import styles from "./ProjectsSection.module.css";
 import Link from "next/link";
-import LatestPost from "./LatestPost";
 
 function ProjectsSection() {
   const projects = [
@@ -35,8 +34,10 @@ function ProjectsSection() {
   ];
   return (
     <section id="projects" className={styles.projects}>
-      <div>
-        <h2 className="sectionTitle">Projects</h2>
+      <div className={styles.projectsInner}>
+        <div className={styles.projectsHead}>
+          <h2 className={styles.projectsHeading}>My Projects</h2>
+        </div>
         <hr className="ornRule" />
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (
@@ -49,21 +50,21 @@ function ProjectsSection() {
                   loading="lazy"
                 />
               </div>
-              <span className={styles.tileKicker}>Project</span>
-              <Link
-                href={project.link}
-                target="_blank"
-                className={styles.tileTitle}
-              >
-                {project.title}
-              </Link>
-              <p className={styles.tileDescription}>{project.description}</p>
+              <div className={styles.tileContent}>
+                <span className={styles.tileKicker}>Project</span>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  className={styles.tileTitle}
+                >
+                  {project.title}
+                </Link>
+                <p className={styles.tileDescription}>{project.description}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
-
-      <LatestPost />
     </section>
   );
 }
