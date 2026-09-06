@@ -31,6 +31,20 @@ function ProjectsSection() {
       description:
         "A RESTful API built with JAX-RS and Grizzly to manage campus rooms and sensors. Features sub-resource locators, HATEOAS links, custom exception mapping, and request logging via container filters.",
     },
+    {
+      title: "Pendulum Simulation",
+      link: "#",
+      image: "/pendulum.png",
+      description:
+        "A physics simulation modelling the chaotic motion of a double pendulum, integrating the equations of motion numerically and tracing the path of the swinging bob in real time.",
+    },
+    {
+      title: "Halal Lang",
+      link: "#",
+      image: "/halal_lang.svg",
+      description:
+        "A small interpreted programming language with its own lexer, parser, and tree-walking evaluator, supporting variables, functions, and control flow.",
+    },
   ];
   return (
     <section id="projects" className={styles.projects}>
@@ -51,7 +65,6 @@ function ProjectsSection() {
                 />
               </div>
               <div className={styles.tileContent}>
-                <span className={styles.tileKicker}>Project</span>
                 <Link
                   href={project.link}
                   target="_blank"

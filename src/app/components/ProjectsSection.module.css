@@ -90,17 +90,6 @@
   overflow: hidden;
 }
 
-.tileKicker {
-  display: block;
-  font-family: var(--font-mono), "Monaco", "Courier New", monospace;
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 0.9px;
-  text-transform: uppercase;
-  color: var(--olive-gray);
-  margin: 0 0 2px;
-}
-
 .tileTitle {
   display: -webkit-box;
   -webkit-box-orient: vertical;
